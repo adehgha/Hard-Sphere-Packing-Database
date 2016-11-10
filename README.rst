@@ -1,7 +1,13 @@
 **Table of Contents**:
 
-[TOC]
-
+  * [Hard Sphere Packing Database](#Hard-Sphere-Packing-Database)
+    * [1- packing](#1--packing-)
+    * [2- adj_mat](#2--adj_mat-)
+    * [3- split_solns](#3--split_solns-)
+    * [4- un_mat](#4--un_mat-)
+  * [How to cite this work:](#how-to-cite-this-work)
+  * [Authors:](#authors)
+  
 Hard Sphere Packing Database
 =================================
 **What is included**: This database has been extracted from the [original work](http://cims.nyu.edu/~holmes/packings.html) of [Professor Miranda Holmes-Cerfon](http://cims.nyu.edu/~holmes/index.html). She has computed all possible hard sphere packings (unless proven otherwise) of clusters with 14 or less particles. In the current work we have only included the clusters with up to 12 particles. Our contribution to this database is the fact that we describe how "iterative" clusters can be broken into "seeds" with smaller size. We have provided unique solutions (splitting to seed clusters) for all the clusters originally provided in Cerfon's database.
@@ -75,15 +81,14 @@ It means that the cluster t, consists of 3 sub-clusters of size 4, 5 and 5 verti
 # How to cite this work:
 
 If you have used this database in your work, please consider citing the following publications:
-1- Holmes-Cerfon, M. C. "Enumerating rigid sphere packings." SIAM Review 58.2 (2016): 229-244. [DOI:10.1137/140982337](http://epubs.siam.org/doi/10.1137/140982337)
-2- Banadaki, A. D. & Patala, S. "A Three­Dimensional Polyhedral Unit Model for Grain Boundary Structure in fcc Metals", npj Computational Materials, Under Review (2016).
+- Holmes-Cerfon, M. C. "Enumerating rigid sphere packings." SIAM Review 58.2 (2016): 229-244. [DOI:10.1137/140982337](http://epubs.siam.org/doi/10.1137/140982337)
+- Banadaki, A. D. & Patala, S. "A Three­Dimensional Polyhedral Unit Model for Grain Boundary Structure in fcc Metals", npj Computational Materials, Under Review (2016).
 
 
 # Authors:
 
 Arash Dehghan Banadaki <adehgha@ncsu.edu>, Srikanth Patala <spatala@ncsu.edu>
 
-------------------------------------------------------------------------------------------------------
+-------------
 
-Copyright &copy; 2016,  Arash Dehghan Banadaki and [Srikanth Patala](http://research.mse.ncsu.edu/patala/).
-License: GNU-GPL Style.
+Copyright &copy; 2016,  **Arash Dehghan Banadaki** and **[Srikanth Patala](http://research.mse.ncsu.edu/patala/)**. License: GNU-GPL Style.
