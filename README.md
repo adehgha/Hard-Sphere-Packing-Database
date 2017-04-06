@@ -82,7 +82,7 @@ It means that the cluster t, consists of 3 sub-clusters of size 4, 5 and 5 verti
 
 If you have used this database in your work, please consider citing the following publications:
 - Holmes-Cerfon, M. C. "Enumerating rigid sphere packings." SIAM Review 58.2 (2016): 229-244. [DOI:10.1137/140982337](http://epubs.siam.org/doi/10.1137/140982337)
-- Banadaki, A. D. & Patala, S. "A Three­Dimensional Polyhedral Unit Model for Grain Boundary Structure in fcc Metals", npj Computational Materials, Under Review (2016).
+- Banadaki, Arash Dehghan, and Srikanth Patala. "A three-dimensional polyhedral unit model for grain boundary structure in fcc metals." NPJ Computational Materials 3 (2017): 1. [DOI:10.1038/s41524-017-0016-0](http://www.nature.com/articles/s41524-017-0016-0)
 
 
 # Authors:
