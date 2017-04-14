@@ -1,4 +1,6 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+<!DOCTYPE html>
+<!-- saved from url=(0019)file:///tmp/37.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {
   width: 45em;
   border: 1px solid #ddd;
   outline: 1300px solid #fff;
@@ -1015,56 +1017,54 @@ body .markdown-body
   }
 }
 </style><title>README</title></head><body><article class="markdown-body"><p><strong>Table of Contents</strong>:</p>
-<div class="toc">
 <ul>
-<li><a href="#hard-sphere-packing-database">Hard Sphere Packing Database</a><ul>
-<li><a href="#1-packing">1- packing:</a></li>
-<li><a href="#2-adj_mat">2- adj_mat:</a></li>
-<li><a href="#3-split_solns">3- split_solns:</a></li>
-<li><a href="#4-un_mat">4- un_mat:</a></li>
+<li><a href="file:///tmp/37.html#Hard-Sphere-Packing-Database">Hard Sphere Packing Database</a><ul>
+<li><a href="file:///tmp/37.html#1--packing-">1- packing</a></li>
+<li><a href="file:///tmp/37.html#2--adj_mat-">2- adj_mat</a></li>
+<li><a href="file:///tmp/37.html#3--split_solns-">3- split_solns</a></li>
+<li><a href="file:///tmp/37.html#4--un_mat-">4- un_mat</a></li>
 </ul>
 </li>
-<li><a href="#how-to-cite-this-work">How to cite this work:</a></li>
-<li><a href="#authors">Authors:</a></li>
+<li><a href="file:///tmp/37.html#how-to-cite-this-work">How to cite this work:</a></li>
+<li><a href="file:///tmp/37.html#authors">Authors:</a></li>
 </ul>
-</div>
-<h1 id="hard-sphere-packing-database"><a name="user-content-hard-sphere-packing-database" href="#hard-sphere-packing-database" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Hard Sphere Packing Database</h1>
-<p><strong>What is included</strong>: This database has been extracted from the <a href="http://cims.nyu.edu/~holmes/packings.html">original work</a> of <a href="http://cims.nyu.edu/~holmes/index.html">Professor Miranda Holmes-Cerfon</a>. She has computed all possible hard sphere packings (unless proven otherwise) of clusters with 14 or less particles. In the current work we have only included the clusters with up to 12 particles. Our contribution to this database is the fact that we describe how &ldquo;iterative&rdquo; clusters can be broken into &ldquo;seeds&rdquo; with smaller size. We have provided unique solutions (splitting to seed clusters) for all the clusters originally provided in Cerfon&rsquo;s database.<br />
+<h1 id="hard-sphere-packing-database"><a name="user-content-hard-sphere-packing-database" href="file:///tmp/37.html#hard-sphere-packing-database" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Hard Sphere Packing Database</h1>
+<p><strong>What is included</strong>: This database has been extracted from the <a href="http://cims.nyu.edu/~holmes/packings.html">original work</a> of <a href="http://cims.nyu.edu/~holmes/index.html">Professor Miranda Holmes-Cerfon</a>. She has computed all possible hard sphere packings (unless proven otherwise) of clusters with 14 or less particles. In the current work we have only included the clusters with up to 12 particles. Our contribution to this database is the fact that we describe how “iterative” clusters can be broken into “seeds” with smaller size. We have provided unique solutions (splitting to seed clusters) for all the clusters originally provided in Cerfon’s database.<br>
 We provide a Matlab datafile (.mat) with the following variables:</p>
-<h2 id="1-packing"><a name="user-content-1-packing" href="#1-packing" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1- packing:</h2>
+<h2 id="1-packing"><a name="user-content-1-packing" href="file:///tmp/37.html#1-packing" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1- packing:</h2>
 <p><strong>Contains</strong>:   3D coordinates of all possible hard sphere packings of clusters with 4 to 12 particles (hence first 3 sub-cells are empty).</p>
-<p><strong>How to access the data</strong>: <br />
+<p><strong>How to access the data</strong>: <br>
 <code>packing{i}</code>:  lists all the possible unique hard sphere packings for clusters with size i. <code>length(packing{i})</code> provides the number of possible unique hard sphere packings for clusters with size i.</p>
 <p><code>packing{i}{j}</code>:   Matrix of size i x 3. Provides the 3D coordinates of the jth unique hard sphere packing of clusters with size i.</p>
-<h2 id="2-adj_mat"><a name="user-content-2-adj_mat" href="#2-adj_mat" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2- adj_mat:</h2>
+<h2 id="2-adj_mat"><a name="user-content-2-adj_mat" href="file:///tmp/37.html#2-adj_mat" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2- adj_mat:</h2>
 <p><strong>Contains</strong>:   The connectivity matrix (adjacency matrix) of all possible hard sphere packings of clusters of 4 to 12 particles (hence first 3 sub-cells are empty). Size of this cell is identical to that of the <code>packing</code> variable (associated with each hard sphere packing there exists a connectivity matrix).</p>
-<p><strong>How to access the data</strong>: <br />
+<p><strong>How to access the data</strong>: <br>
 <code>adj_mat{i}</code>:      lists the connectivity matrix for all the possible unique hard sphere packings for clusters with size i.</p>
 <p><code>adj_mat{i}{j}</code>:   Square matrix of size i x i. Provides the connectivity matrix for the jth unique hard sphere packing of clusters with size i, (coordinates of which can be found in <code>packing{i}{j}</code>). If the element in the mth row and nth column of this matrix is equal to 1 then particle m and n are connected. If the mentioned element is zero then they are not touching.</p>
-<h2 id="3-split_solns"><a name="user-content-3-split_solns" href="#3-split_solns" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3- split_solns:</h2>
-<p><strong>Contains</strong>:   The type of the hard sphere clusters. Determines if the cluster is a &ldquo;seed&rdquo; (can not be divided to smaller hard sphere clusters), or if it is &ldquo;iterative&rdquo; (can be split into hard sphere seeds of smaller number of particles). Size of this cell is identical to that of the <code>packing</code> variable (associated with each hard sphere packing we provide its type, also if and how it can be split into smaller hard sphere packings).</p>
-<p><strong>How to access the data</strong>: <br />
+<h2 id="3-split_solns"><a name="user-content-3-split_solns" href="file:///tmp/37.html#3-split_solns" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3- split_solns:</h2>
+<p><strong>Contains</strong>:   The type of the hard sphere clusters. Determines if the cluster is a “seed” (can not be divided to smaller hard sphere clusters), or if it is “iterative” (can be split into hard sphere seeds of smaller number of particles). Size of this cell is identical to that of the <code>packing</code> variable (associated with each hard sphere packing we provide its type, also if and how it can be split into smaller hard sphere packings).</p>
+<p><strong>How to access the data</strong>: <br>
 <code>split_solns{i}</code>:      lists the cluster type (seed or iterative) for all possible unique hard sphere packings of size i.</p>
-<p><code>split_solns{i}{j}</code>:    A cell of size 2. Provides the type of the jth unique hard sphere of clusters with size i, (coordinates of which can be found in <code>packing{i}{j}</code>). First field indicates the type of the cluster (seed or iterative). Second field provides a unique solution on how an iterative cluster can be split into smaller seeds. This field will be empty for &ldquo;seeds&rdquo; as they can not be split into smaller hard sphere packings. See below for explanation of each of the fields.</p>
-<p><code>split_solns{i}{j}{1}</code>: A string with two possible values. &ldquo;seed&rdquo; or &ldquo;iterative&rdquo;.</p>
+<p><code>split_solns{i}{j}</code>:    A cell of size 2. Provides the type of the jth unique hard sphere of clusters with size i, (coordinates of which can be found in <code>packing{i}{j}</code>). First field indicates the type of the cluster (seed or iterative). Second field provides a unique solution on how an iterative cluster can be split into smaller seeds. This field will be empty for “seeds” as they can not be split into smaller hard sphere packings. See below for explanation of each of the fields.</p>
+<p><code>split_solns{i}{j}{1}</code>: A string with two possible values. “seed” or “iterative”.</p>
 <p><code>split_solns{i}{j}{2}</code>: An empty field (for seeds) or a cell structure of size k (for iterative clusters) where k is the number of seed sub-clusters that can split the jth unique hard sphere packing of clusters with size i. If not empty it always contains a cell with multiple sub-clusters. <code>k = split_solns{i}{j}{2}{1}</code>.</p>
 <p><code>split_solns{i}{j}{2}{1}{p}</code>: Where 0&lt;= p &lt;= k. It includes detailed information about the pth sub-cluster (out of total k sub-clusters) that can be identified in the jth unique hard sphere packing of size i. It always has 5 sub-cells explained below.</p>
 <p><code>split_solns{i}{j}{2}{1}{p}{1}</code>: A 1 x q row matrix. where q is the number of particles in the pth sub-cluster. This row matrix provides the indices of the vertices of the sub-cluster to the parent cluster (<code>packing{i}{j}</code>). For example if this row matrix looks like <code>[a, b, c, d]</code> then this sub-cluster has 4 vertices that are going to be the ath, bth, cth and dth vertex in the parent cluster. The mapping of these vertices are provided in the 5th field of this cell i.e. <code>split_solns{i}{j}{2}{1}{p}{5}</code>. See below.</p>
 <p><code>split_solns{i}{j}{2}{1}{p}{2}</code>: A q x q square matrix, where q is the number of particles in the pth sub-cluster. This square matrix provides the connectivity matrix of this sub-cluster.</p>
-<p><code>split_solns{i}{j}{2}{1}{p}{3}</code>: A string indicating the type of the sub-cluster which is always &ldquo;seed&rdquo;.</p>
+<p><code>split_solns{i}{j}{2}{1}{p}{3}</code>: A string indicating the type of the sub-cluster which is always “seed”.</p>
 <p><code>split_solns{i}{j}{2}{1}{p}{4}</code>: The id of the found sub-cluster in all the q-sized clusters.</p>
 <p><code>split_solns{i}{j}{2}{1}{p}{5}</code>: A 1 x q row matrix, where q is the number of particles in the pth sub-cluster. This row matrix provides a direct mapping between the vertices of the sub-cluster to the parent cluster (<code>packing{i}{j}</code>). For example if this row matrix looks like <code>[b, c, a, d]</code> then this sub-cluster has 4 vertices in which the 1st vertex maps to the bth vertex in the parent cluster, 2nd vertex maps to c, 3rd vertex maps to a and 4th vertex maps to dth vertex in the parent cluster.</p>
-<h2 id="4-un_mat"><a name="user-content-4-un_mat" href="#4-un_mat" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4- un_mat:</h2>
+<h2 id="4-un_mat"><a name="user-content-4-un_mat" href="file:///tmp/37.html#4-un_mat" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4- un_mat:</h2>
 <p><strong>Contains</strong>:   Contains a summary of how clusters split into sub-clusters.  It is a cell of size 12.</p>
-<p><strong>How to access the data</strong>: <br />
-<code>un_mat{i}</code>:     A matrix of size r x s, where <code>r = length(packing{i})</code>. s is the maximum number of sub-clusters that an iterative cluster of size i can have. Each row of this matrix is associated with an i-sized rigid packing. The values of each row contains the number of vertices that each cluster consists of. For instance if row t of this matrix is equal to:<br />
-<code>un_mat{i}(t, :) = [4, 5 , 5, 0, 0, 0]</code><br />
-It means that the cluster t, consists of 3 sub-clusters of size 4, 5 and 5 vertices. If a row is all zeros then it means that the cluster associated with that row is a &ldquo;seed&rdquo;.</p>
-<h1 id="how-to-cite-this-work"><a name="user-content-how-to-cite-this-work" href="#how-to-cite-this-work" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>How to cite this work:</h1>
-<p>If you have used this database in your work, please consider citing the following publications:<br />
-- Holmes-Cerfon, M. C. &ldquo;Enumerating rigid sphere packings.&rdquo; SIAM Review 58.2 (2016): 229-244. <a href="http://epubs.siam.org/doi/10.1137/140982337">DOI:10.1137/140982337</a><br />
-- Banadaki, A. D. &amp; Patala, S. &ldquo;A Three­Dimensional Polyhedral Unit Model for Grain Boundary Structure in fcc Metals&rdquo;, npj Computational Materials, Under Review (2016).</p>
-<h1 id="authors"><a name="user-content-authors" href="#authors" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Authors:</h1>
-<p>Arash Dehghan Banadaki <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#100;&#101;&#104;&#103;&#104;&#97;&#64;&#110;&#99;&#115;&#117;&#46;&#101;&#100;&#117;">&#97;&#100;&#101;&#104;&#103;&#104;&#97;&#64;&#110;&#99;&#115;&#117;&#46;&#101;&#100;&#117;</a>, Srikanth Patala <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#112;&#97;&#116;&#97;&#108;&#97;&#64;&#110;&#99;&#115;&#117;&#46;&#101;&#100;&#117;">&#115;&#112;&#97;&#116;&#97;&#108;&#97;&#64;&#110;&#99;&#115;&#117;&#46;&#101;&#100;&#117;</a></p>
-<hr />
-<p>Copyright &copy; 2016,  <strong>Arash Dehghan Banadaki</strong> and <strong><a href="http://research.mse.ncsu.edu/patala/">Srikanth Patala</a></strong>. License: GNU-GPL Style.</p></article></body></html>
+<p><strong>How to access the data</strong>: <br>
+<code>un_mat{i}</code>:     A matrix of size r x s, where <code>r = length(packing{i})</code>. s is the maximum number of sub-clusters that an iterative cluster of size i can have. Each row of this matrix is associated with an i-sized rigid packing. The values of each row contains the number of vertices that each cluster consists of. For instance if row t of this matrix is equal to:<br>
+<code>un_mat{i}(t, :) = [4, 5 , 5, 0, 0, 0]</code><br>
+It means that the cluster t, consists of 3 sub-clusters of size 4, 5 and 5 vertices. If a row is all zeros then it means that the cluster associated with that row is a “seed”.</p>
+<h1 id="how-to-cite-this-work"><a name="user-content-how-to-cite-this-work" href="file:///tmp/37.html#how-to-cite-this-work" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>How to cite this work:</h1>
+<p>If you have used this database in your work, please consider citing the following publications:<br>
+- Holmes-Cerfon, M. C. “Enumerating rigid sphere packings.” SIAM Review 58.2 (2016): 229-244. <a href="http://epubs.siam.org/doi/10.1137/140982337">DOI:10.1137/140982337</a><br>
+- Banadaki, Arash Dehghan, and Srikanth Patala. “A three-dimensional polyhedral unit model for grain boundary structure in fcc metals.” NPJ Computational Materials 3 (2017): 1. <a href="http://www.nature.com/articles/s41524-017-0016-0">DOI:10.1038/s41524-017-0016-0</a></p>
+<h1 id="authors"><a name="user-content-authors" href="file:///tmp/37.html#authors" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Authors:</h1>
+<p>Arash Dehghan Banadaki <a href="mailto:adehgha@ncsu.edu">adehgha@ncsu.edu</a>, Srikanth Patala <a href="mailto:spatala@ncsu.edu">spatala@ncsu.edu</a></p>
+<hr>
+<p>Copyright © 2016,  <strong>Arash Dehghan Banadaki</strong> and <strong><a href="http://research.mse.ncsu.edu/patala/">Srikanth Patala</a></strong>. License: GNU-GPL Style.</p></article></body></html>
